@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Todo-Work</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_data">没有数据</string>
+    <string name="title">标题</string>
+    <string name="description">描述</string>
+    <string name="menu_search">搜索</string>
+    <string name="sort_by">分类</string>
+    <string name="priorities_high">高级</string>
+    <string name="priorities_medium">中级</string>
+    <string name="delete_all">全部删除</string>
+    <string name="add">添加</string>
+    <string name="save">保存</string>
+    <string name="delete">删除</string>
+    <string name="priorities_low">低级</string>
+
+
+    <string-array name="priorities">
+        <item>高优先级</item>
+        <item>中等优先级</item>
+        <item>低优先级</item>
+    </string-array>
+</resources>

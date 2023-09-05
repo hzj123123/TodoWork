@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+    <variable
+        name="args"
+        type="com.example.todo_work.fragments.UpdateFragmentArgs" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp"
+        tools:context=".fragments.UpdateFragment">
+
+        <EditText
+            android:id="@+id/cur_title_et"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="16dp"
+            android:ems="10"
+            android:text="@{args.currentItem.title}"
+            android:inputType="textPersonName"
+            android:hint="@string/title"
+            android:background="@drawable/custom_input"
+            android:textColorHint="@color/lightGray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/cur_priorities_spinner"
+            android:layout_width="0dp"
+            android:background="@drawable/custom_input"
+            android:layout_height="60dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="8dp"
+            android:parsePriorityToInt="@{args.currentItem.priority}"
+            android:entries="@array/priorities"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cur_title_et" />
+
+        <EditText
+            android:id="@+id/cur_description_et"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@{args.currentItem.description}"
+            android:background="@drawable/custom_input"
+            android:layout_marginTop="8dp"
+            android:paddingStart="24dp"
+            android:textColorHint="@color/lightGray"
+            android:paddingEnd="24dp"
+            android:paddingTop="16dp"
+            android:ems="10"
+            android:hint="@string/description"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cur_priorities_spinner" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
